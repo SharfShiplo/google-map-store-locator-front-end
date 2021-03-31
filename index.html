@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/c99f492e0d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="title">Store Locator</div>
+    <div class="Search-box">
+        <input id="zip-code" class="Search-input" type="text" placeholder="Enter Zip" onkeyup="onEnter(event)">
+        <div class="Search-icon" onclick="getStores()"><i class="fas fa-search"></i></div>
+    </div>
+    <div class="stores-list-container">
+        <div class="stores-list">
+            <div class="intro">
+                <span class="enter-zipcode">Enter Zipcode</span>
+                <span class="find-storese">Find stores near you</span>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="js/index.js" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<Your Key>&callback=initMap&libraries=&v=weekly"
+        async></script>
+</body>
+
+</html>
